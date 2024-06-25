@@ -38,6 +38,7 @@ main {
   width: 100%;
   height: 85vh;
   border-bottom: 1px solid gray;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,4 +46,13 @@ main {
 main h1 {
   font: 500 6em var(--f3);
   margin-bottom: 10vh;
+}
+main .aCont {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }/*# sourceMappingURL=main.css.map */

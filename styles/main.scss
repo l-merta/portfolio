@@ -40,6 +40,7 @@ main
   width: 100%;
   height: 85vh;
   border-bottom: 1px solid gray;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,5 +49,20 @@ main
   {
     font: 500 6.0em var(--f3);
     margin-bottom: 10vh;
+  }
+  .aCont
+  {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    a
+    {
+      
+    }
   }
 }
