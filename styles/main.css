@@ -1,7 +1,34 @@
 body {
+  background: white;
   margin: 0;
 }
 
 body * {
   box-sizing: border-box;
+}
+
+#particles-js {
+  opacity: 1;
+  width: 100%;
+  height: 85vh;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.special-div {
+  background-color: white;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: 45vh;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+main {
+  width: 100%;
+  height: 85vh;
+  border-bottom: 1px solid gray;
 }/*# sourceMappingURL=main.css.map */
