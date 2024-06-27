@@ -3,18 +3,54 @@
   --f1: "Comfortaa";
   --f2: "";
   --f3: "Jersey 10";
+  --hh: 5em;
 }
 body
 {
   background: white;
   margin: 0;
   margin-bottom: 500px;
+  overflow-x: hidden;
 }
 body *
 {
   box-sizing: border-box;
 }
+.disabled
+{
+  display: none !important;
+}
 
+header
+{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: var(--hh);
+  border-bottom: 1px solid gray;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  .s1,
+  .s2
+  {
+    width: 100%;
+    height: 100%;
+  }
+  span
+  {
+    font: 400 2.5em var(--f3);
+    width: 12em;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    transition: all .12s;
+  }
+}
 #particles-js
 {
   opacity: 1.0;
@@ -22,18 +58,38 @@ body *
   height: 85vh;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: 1;
 }
-.special-div
+.colorChangerCont
 {
-  background-color: white;
-  mix-blend-mode: difference;
   width: 100%;
-  height: 0vh;
-  z-index: 10;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   position: absolute;
-  top: 0;
-  pointer-events: none;
+  overflow: hidden;
+
+  --effect-width: 400vw;
+
+  .colorChanger
+  {
+    background-color: white;
+    mix-blend-mode: difference;
+    aspect-ratio: 1/1;
+    width: var(--effect-width);
+    border-radius: 50%;
+    position: absolute;
+    bottom: calc(var(--effect-width) * -0.5);
+    pointer-events: none;
+    z-index: 5;
+  }
+  .colorChangerAnimate
+  {
+    bottom: calc(var(--effect-width) * -1);
+    animation: colorChangeStart 1.2s ease-in;
+    animation-fill-mode: forwards; 
+  }
 }
 main
 {
@@ -42,27 +98,92 @@ main
   border-bottom: 1px solid gray;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.0em;
   
   h1
   {
     font: 500 6.0em var(--f3);
-    margin-bottom: 10vh;
+    margin: 0;
+  }
+  h2
+  {
+    opacity: 0.8;
+    font: 500 2.2em var(--f3);
+    margin-top: 0;
   }
   .aCont
   {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: end;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    pointer-events: none;
 
-    a
+    .aInnerCont
     {
-      
+      height: 3em;
+      width: 10em;
+      position: absolute;
+      bottom: -1.5em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: all;
+      z-index: 10;
+
+      a
+      {
+        background-color: rgb(248, 248, 248);
+        height: 100%;
+        width: 100%;
+        border: 1px solid rgb(128, 128, 128);
+        border-radius: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: all;
+        transition: all .12s;
+        cursor: pointer;
+      }
+      .line
+      {
+        background-color: rgb(128, 128, 128);
+        width: 0;
+        height: 4px;
+        position: absolute;
+        transition: all .12s;
+        z-index: -1;
+      }
     }
+    .aInnerCont:hover
+    {
+      a
+      {
+        border-width: 4px;
+      }
+      .line
+      {
+        width: 100vw;
+      }
+    }
+  }
+}
+
+@keyframes colorChangeStart
+{
+  0%
+  {
+    bottom: calc(var(--effect-width) * -1);
+  }
+  100%
+  {
+    bottom: calc(var(--effect-width) * -0.5);
   }
 }
