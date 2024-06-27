@@ -26,6 +26,8 @@
   --c2: white;
   --c3: rgb(201, 201, 201);
   --hh: 5em;
+  //
+  --color-test: rgb(98, 85, 133);
 }
 body
 {
@@ -234,6 +236,7 @@ main
       align-items: center;
       justify-content: center;
       gap: 0.8em;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.03);
       overflow: hidden;
 
       i
@@ -261,7 +264,7 @@ main
 
         span
         {
-          font: 600 0.9em var(--f1);
+          font: 600 1.2em var(--f2);
           z-index: 3;
         }
         .hladina
@@ -273,7 +276,7 @@ main
           bottom: 0;
           left: 0;
           right: 0;
-          transition: all .2s;
+          transition: all .3s;
         }
       }
     }
@@ -285,8 +288,6 @@ main
 
         .hladina
         {
-          background-color: attr(data-color);
-          height: attr(data-height);
         }
       }
     }

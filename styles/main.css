@@ -24,6 +24,7 @@
   --c2: white;
   --c3: rgb(201, 201, 201);
   --hh: 5em;
+  --color-test: rgb(235, 66, 0);
 }
 
 body {
@@ -206,6 +207,7 @@ main .aCont .aInnerCont:hover .line {
   align-items: center;
   justify-content: center;
   gap: 0.8em;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.03);
   overflow: hidden;
 }
 .umim .cont .tech i {
@@ -230,7 +232,7 @@ main .aCont .aInnerCont:hover .line {
   transition: all 0.12s;
 }
 .umim .cont .tech .percent span {
-  font: 600 0.9em var(--f1);
+  font: 600 1.2em var(--f2);
   z-index: 3;
 }
 .umim .cont .tech .percent .hladina {
@@ -241,16 +243,11 @@ main .aCont .aInnerCont:hover .line {
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all 0.2s;
+  transition: all 0.3s;
 }
 .umim .cont .tech:hover .percent {
   opacity: 1;
 }
-.umim .cont .tech:hover .percent .hladina {
-  background-color: attr(data-color);
-  height: attr(data-height);
-}
-
 @keyframes colorChangeStart {
   0% {
     bottom: calc(var(--effect-width) * -1);
