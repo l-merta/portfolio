@@ -34,11 +34,15 @@ for(let i = 0; i < tech.length; i++) {
   nTech.querySelector("i").style = "color: " + tech[i].color + ";";
   nTech.querySelector(".name").innerHTML = tech[i].name;
   nTech.querySelector(".percent span").innerHTML = tech[i].percent + "%";
-  nTech.addEventListener("mouseover", () => {
-    nTech.querySelector(".hladina").style = "height: " + tech[i].percent + "%;";
-  });
-  nTech.addEventListener("mouseout", () => {
-    nTech.querySelector(".hladina").style = "height: 0%";
-  });
+  if(tech[i].percent > 0) {
+    nTech.addEventListener("mouseover", () => {
+      nTech.querySelector(".hladina").style = "height: " + tech[i].percent + "%;";
+      nTech.querySelector(".percent").style = "opacity: 1;";
+    });
+    nTech.addEventListener("mouseout", () => {
+      nTech.querySelector(".hladina").style = "height: 0%";
+      nTech.querySelector(".percent").style = "opacity: 0;";
+    });
+  }
   techCont.appendChild(nTech, techCont.children[techCont.children.length]);
 }

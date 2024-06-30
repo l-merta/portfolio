@@ -61,12 +61,46 @@ header {
   align-items: center;
   mix-blend-mode: difference;
   z-index: 10;
+  --gap: 3em;
 }
 header .s1,
 header .s2 {
   color: white;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+header .s1 a,
+header .s2 a {
+  font: 500 1.4em var(--f4);
+  border-radius: 0.25em;
+  padding: 0.4em 0.2em;
+  position: relative;
+  transition: all 0.12s;
+  cursor: pointer;
+}
+header .s1 a .line,
+header .s2 a .line {
+  background-color: white;
+  height: 0.08em;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.12s;
+}
+header .s1 a:hover .line,
+header .s2 a:hover .line {
+  width: 100%;
+}
+header .s2 {
+  padding-left: calc(var(--gap) * 0.6);
+}
+header .s1 {
+  padding-right: calc(var(--gap) * 0.6);
+  justify-content: end;
 }
 header .name {
   color: white;
@@ -131,11 +165,13 @@ main {
 main h1 {
   font: 500 6em var(--f3);
   margin: 0;
+  text-align: center;
 }
 main h2 {
   opacity: 0.8;
   font: 500 2.2em var(--f3);
   margin-top: 0;
+  text-align: center;
 }
 main .aCont {
   display: flex;
@@ -239,6 +275,7 @@ main .aCont .aInnerCont:hover .line {
 .umim .cont .tech .percent span {
   font: 600 1.2em var(--f2);
   z-index: 3;
+  pointer-events: none;
 }
 .umim .cont .tech .percent .hladina {
   background-color: rgba(255, 255, 255, 0.7);
@@ -250,15 +287,13 @@ main .aCont .aInnerCont:hover .line {
   right: 0;
   transition: all 0.3s;
 }
-.umim .cont .tech:hover .percent {
-  opacity: 1;
-}
-
 .skola {
   width: 100%;
-  height: 20em;
 }
-
+.skola .sin_parent {
+  width: 100%;
+  height: 30em;
+}
 @keyframes colorChangeStart {
   0% {
     bottom: calc(var(--effect-width) * -1);
