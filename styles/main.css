@@ -231,7 +231,9 @@ main .aCont .aInnerCont:hover .line {
   width: 100%;
 }
 .umim .cont {
-  width: 100%;
+  width: 90%;
+  max-width: 40em;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -247,12 +249,15 @@ main .aCont .aInnerCont:hover .line {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8em;
+  gap: 0.5em;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.03);
   overflow: hidden;
 }
-.umim .cont .tech i {
-  font-size: 2em;
+.umim .cont .tech .icon {
+  aspect-ratio: 1/1;
+  width: 45%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .umim .cont .tech .name {
   font: 600 0.9em var(--f1);
@@ -290,10 +295,31 @@ main .aCont .aInnerCont:hover .line {
 .skola {
   width: 100%;
 }
-.skola .sin_parent {
+.skola .cont {
   width: 100%;
   height: 30em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.skola .cont .sin_parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.skola .cont .testDiv {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
 @keyframes colorChangeStart {
   0% {
     bottom: calc(var(--effect-width) * -1);

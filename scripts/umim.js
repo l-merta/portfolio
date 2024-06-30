@@ -2,27 +2,57 @@
 const techCont = document.querySelector(".umim .cont");
 const tech = [
   {
-    icon: "fa-brands fa-html5",
+    icon: "html.png",
     name: "HTML",
     percent: 80,
     color: "rgb(235, 66, 0)"
   },
   {
-    icon: "fa-brands fa-css3-alt",
+    icon: "css.png",
     name: "CSS",
     percent: 80,
     color: "rgb(0, 129, 235)"
   },
   {
-    icon: "fa-brands fa-js",
+    icon: "js.png",
     name: "JS",
     percent: 50,
     color: "rgb(230, 214, 0)"
   },
   {
-    icon: "fa-brands fa-php",
+    icon: "php.png",
     name: "PHP",
     percent: 30,
+    color: "rgb(98, 85, 133)"
+  },
+  {
+    icon: "csh.png",
+    name: "C#",
+    percent: 30,
+    color: "rgb(98, 85, 133)"
+  },
+  {
+    icon: "photoshop.png",
+    name: "Photoshop",
+    percent: 20,
+    color: "rgb(98, 85, 133)"
+  },
+  {
+    icon: "blender.png",
+    name: "Blender",
+    percent: 20,
+    color: "rgb(98, 85, 133)"
+  },
+  {
+    icon: "unity.png",
+    name: "Unity",
+    percent: 0,
+    color: "rgb(98, 85, 133)"
+  },
+  {
+    icon: "github.png",
+    name: "Github",
+    percent: 0,
     color: "rgb(98, 85, 133)"
   }
 ];
@@ -30,8 +60,9 @@ const tech = [
 for(let i = 0; i < tech.length; i++) {
   const nTech = techCont.querySelector(".tech-def").cloneNode(true);
   nTech.classList = "tech";
-  nTech.querySelector("i").classList = tech[i].icon;
-  nTech.querySelector("i").style = "color: " + tech[i].color + ";";
+  //nTech.querySelector("i").classList = tech[i].icon;
+  //nTech.querySelector("i").style = "color: " + tech[i].color + ";";
+  nTech.querySelector(".icon").src = "images/"+tech[i].icon;
   nTech.querySelector(".name").innerHTML = tech[i].name;
   nTech.querySelector(".percent span").innerHTML = tech[i].percent + "%";
   if(tech[i].percent > 0) {
