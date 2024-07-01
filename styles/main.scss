@@ -42,9 +42,23 @@ body *
 }
 .sectionHeader
 {
+  width: 100%;
   font: 400 2.0em var(--f2);
   text-align: center;
-  margin: 3em;
+  margin: 3em 0;
+}
+.sectionHeaderAbs
+{
+  color: white;
+  mix-blend-mode: difference;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  position: absolute;
+  top: 0;
+}
+.headerAbs
+{
+  margin-top: 7em !important;
 }
 .disabled
 {
@@ -90,7 +104,7 @@ header
       .line
       {
         background-color: white;
-        height: 0.08em;
+        height: 2px;
         width: 0;
         position: absolute;
         bottom: 0;
@@ -337,18 +351,12 @@ main
         }
       }
     }
-    .tech:hover
-    {
-      .percent
-      {
-        //opacity: 1; - v js
-      }
-    }
   }
 }
 .skola
 {
   width: 100%;
+  position: relative;
 
   .cont
   {
@@ -364,22 +372,22 @@ main
       //background-color: red;
       width: 100%;
       height: 100%;
+      padding-right: 15vw;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
       z-index: -1;
-
-      .sin
-      {
-        //background-color: blue;
-      }
     }
     .testDiv
     {
-      background-color: yellow;
-      //mix-blend-mode: difference; //reverse inženýr
+      background-color: white;
+      mix-blend-mode: difference; //reverse inženýr
       width: 200px;
       height: 200px;
       cursor: pointer;
