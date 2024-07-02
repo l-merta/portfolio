@@ -18,10 +18,10 @@
   --f-16: "Heebo";
   --f-17: "Jacquard 12"; //
   ///
-  --f1: var(--f-1);
-  --f2: var(--f-2);
-  --f3: var(--f-3);
-  --f4: var(--f-4);
+  --f1: var(--f-1); //norm
+  --f2: var(--f-2); //nadpis
+  --f3: var(--f-3); //effect
+  --f4: var(--f-4); //header
   --c1: black;
   --c2: white;
   --c3: rgb(201, 201, 201);
@@ -52,7 +52,7 @@ body *
   color: white;
   mix-blend-mode: difference;
   margin-top: 2em;
-  margin-bottom: 3em;
+  //margin-bottom: 10em;
   position: absolute;
   top: 0;
 }
@@ -63,6 +63,14 @@ body *
 .disabled
 {
   display: none !important;
+}
+.testDiv
+{
+  background-color: white;
+  mix-blend-mode: difference; //reverse inženýr
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
 }
 
 header
@@ -203,6 +211,7 @@ main
     font: 500 6.0em var(--f3);
     margin: 0;
     text-align: center;
+    line-height: 0.8em;
   }
   h2
   {
@@ -361,7 +370,6 @@ main
   .cont
   {
     width: 100%;
-    height: 30em;
     position: relative;
     display: flex;
     justify-content: center;
@@ -383,14 +391,124 @@ main
       align-items: center;
       overflow: hidden;
       z-index: -1;
+
+      .sin
+      {
+        transform: rotate(-45deg);
+      }
     }
-    .testDiv
+    .weby
     {
-      background-color: white;
-      mix-blend-mode: difference; //reverse inženýr
-      width: 200px;
-      height: 200px;
-      cursor: pointer;
+      width: 80%;
+      //height: 30em;
+      margin: 0 auto;
+      margin-top: 11em;
+      padding-bottom: 5em;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+      
+      .web
+      {
+        //background-color: white;
+        width: 90vw;
+        max-width: 26em;
+        height: fit-content;
+        padding: 1.4em;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        transition: all .12s;
+        
+        .border
+        {
+          mix-blend-mode: difference;
+          border: 5px solid rgba(255, 255, 255, 0.9);
+          border-radius: 0.4em;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          transition: all .12s;
+        }
+        img
+        {
+          background-color: gray;
+          width: 100%;
+          border-radius: 0.4em;
+          object-fit: cover;
+          transition: all .12s;
+        }
+        h1
+        {
+          color: white;
+          mix-blend-mode: difference;
+          font: 500 1.7em var(--f2);
+          margin: 0.5em 0;
+        }
+        a
+        {
+          background-color: rgb(241, 184, 109);
+          width: 70%;
+          height: 4.2em;
+          border: 4px solid rgb(39, 39, 27);
+          border-radius: 0.3em;
+          margin: 0 auto;
+          margin-top: 2.4em;
+          margin-bottom: 0.5em;
+          position: relative;
+          cursor: pointer;
+
+          .vp
+          {
+            color: var(--c1);
+            background-color: rgb(255, 222, 160);
+            font: 500 1.5em var(--f2);
+            height: calc(100% + 8px);
+            border: 4px solid rgb(39, 39, 27);
+            border-radius: 0.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.7em;
+            position: absolute;
+            left: -4px;
+            right: -4px;
+            bottom: 12px;
+            transition: all .12s;
+          }
+        }
+        a:hover
+        {
+          .vp
+          {
+            bottom: 6px;
+          }
+        }
+        a:active
+        {
+          .vp
+          {
+            bottom: 0;
+          }
+        }
+      }
+      .web:hover
+      {
+        .border
+        {
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+        }
+        img
+        {
+          border-radius: 4em;
+        }
+      }
     }
   } 
 }
