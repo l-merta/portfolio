@@ -1,6 +1,6 @@
 const main = document.querySelector("main");
 const colorChangerCont = main.querySelector(".colorChangerCont");
-const mainAnchorLink = main.querySelector(".aInnerCont a");
+const mainAnchorLink = main.querySelector(".continue");
 
 writeTextEffect(main.querySelector("h1"), false);
 writeTextEffect(main.querySelector("h2"), true);
@@ -30,7 +30,7 @@ function writeTextEffect(element) {
 */
 function writeTextEffect(element, colorChange) {
   const letters = element.innerHTML.split('');
-  element.innerHTML = "";
+  element.innerHTML = ".";
   const randomChar = () => String.fromCharCode(33 + Math.floor(Math.random() * 94));
   let displayText = Array(letters.length).fill('');
   let currentIndex = 0;

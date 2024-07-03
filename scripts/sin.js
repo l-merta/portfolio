@@ -46,6 +46,6 @@ window.addEventListener('resize', resize_sin);
 
 function resize_sin()
 {
-  sin_canvas.width = sin_canvas_parent.clientWidth * 4.0;
-  sin_canvas.height = sin_canvas_parent.clientHeight * 5.0;
+  sin_canvas.width = sin_canvas_parent.clientWidth * 1.5;
+  sin_canvas.height = sin_canvas_parent.clientHeight * 2.8;
 }
