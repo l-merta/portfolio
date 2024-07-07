@@ -1,0 +1,85 @@
+{
+  "skola": [
+    {
+      "name": "Krkonoše",
+      "image": "krkonose.jpg",
+      "folder": "krkonose"
+    },
+    {
+      "name": "Šachy",
+      "image": "sachy.jpg",
+      "folder": "sachy"
+    },
+    {
+      "name": "Formulář",
+      "image": "formular.jpg",
+      "folder": "formular"
+    },
+    {
+      "name": "Školní bufet",
+      "image": "formular2.png",
+      "folder": "formular2"
+    },
+    {
+      "name": "CSS",
+      "image": "css.png",
+      "folder": "css"
+    }
+  ],
+  "tech": [
+    {
+      "icon": "html.png",
+      "name": "HTML",
+      "percent": 0,
+      "color": "rgb(235, 66, 0)"
+    },
+    {
+      "icon": "css.png",
+      "name": "CSS",
+      "percent": 0,
+      "color": "rgb(0, 129, 235)"
+    },
+    {
+      "icon": "js.png",
+      "name": "JS",
+      "percent": 0,
+      "color": "rgb(230, 214, 0)"
+    },
+    {
+      "icon": "php.png",
+      "name": "PHP",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    },
+    {
+      "icon": "csh.png",
+      "name": "C#",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    },
+    {
+      "icon": "photoshop.png",
+      "name": "Photoshop",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    },
+    {
+      "icon": "blender.png",
+      "name": "Blender",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    },
+    {
+      "icon": "unity.png",
+      "name": "Unity",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    },
+    {
+      "icon": "github.png",
+      "name": "Github",
+      "percent": 0,
+      "color": "rgb(98, 85, 133)"
+    }
+  ]
+}

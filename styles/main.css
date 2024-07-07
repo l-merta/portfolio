@@ -356,6 +356,7 @@ main .aCont .aInnerCont:hover .line {
 }
 .skola .cont {
   width: 100%;
+  min-height: 50em;
   position: relative;
   display: flex;
   justify-content: center;
@@ -411,13 +412,18 @@ main .aCont .aInnerCont:hover .line {
   bottom: 0;
   transition: all 0.12s;
 }
-.skola .cont .weby .web img {
-  background-color: gray;
+.skola .cont .weby .web .imgCont {
+  aspect-ratio: 16/9;
   width: 100%;
   border-radius: 0.4em;
+  overflow: hidden;
+  transition: all 0.12s;
+}
+.skola .cont .weby .web .imgCont img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: all 0.12s;
 }
 .skola .cont .weby .web h1 {
   color: white;
@@ -467,13 +473,14 @@ main .aCont .aInnerCont:hover .line {
   right: -5px;
   bottom: -5px;
 }
-.skola .cont .weby .web:hover img {
+.skola .cont .weby .web:hover .imgCont {
   border-radius: 4em;
 }
 
 .projekty {
   width: 100%;
   padding-top: 14em;
+  padding-bottom: 14em;
   position: relative;
 }
 .projekty .sectionHeader span {
