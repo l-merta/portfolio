@@ -4,43 +4,43 @@ const tech = [
   {
     icon: "html.png",
     name: "HTML",
-    percent: 80,
+    percent: 0,
     color: "rgb(235, 66, 0)"
   },
   {
     icon: "css.png",
     name: "CSS",
-    percent: 80,
+    percent: 0,
     color: "rgb(0, 129, 235)"
   },
   {
     icon: "js.png",
     name: "JS",
-    percent: 50,
+    percent: 0,
     color: "rgb(230, 214, 0)"
   },
   {
     icon: "php.png",
     name: "PHP",
-    percent: 30,
+    percent: 0,
     color: "rgb(98, 85, 133)"
   },
   {
     icon: "csh.png",
     name: "C#",
-    percent: 30,
+    percent: 0,
     color: "rgb(98, 85, 133)"
   },
   {
     icon: "photoshop.png",
     name: "Photoshop",
-    percent: 20,
+    percent: 0,
     color: "rgb(98, 85, 133)"
   },
   {
     icon: "blender.png",
     name: "Blender",
-    percent: 20,
+    percent: 0,
     color: "rgb(98, 85, 133)"
   },
   {
