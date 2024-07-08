@@ -1,6 +1,6 @@
 const techCont = document.querySelector(".umim .cont");
 
-fetch('/scripts/json/data.json')  
+fetch('scripts/json/data.json')  
   .then((response) => response.json())
   .then((json) => renderTech(json.tech));
 

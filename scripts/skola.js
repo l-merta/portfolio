@@ -1,6 +1,6 @@
 const webParent = document.querySelector(".skola .weby");
 
-fetch('/scripts/json/data.json')  
+fetch('scripts/json/data.json')  
   .then((response) => response.json())
   .then((json) => renderWebs(json.skola));
 
