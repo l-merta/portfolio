@@ -604,7 +604,7 @@ main
       width: 50em;
       max-width: 90vw;
       //height: 24em;
-      border: 2px solid rgb(214, 214, 214);
+      border: 5px solid rgba(0, 0, 0, 0.9);
       border-radius: 1.0em;
       margin: 0;
       padding: 1em;
@@ -625,14 +625,96 @@ main
           width: 100%;
           img
           {
-            //aspect-ratio: 16/9 !important;
+            aspect-ratio: 16/9 !important;
             width: 100%;
             border-radius: 0.7em;
           }
         }
         .s12
         {
-          width: 60%;
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+
+          nav
+          {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 2em;
+          }
+          h1
+          {
+            color: var(--c1);
+            font: 600 1.7em var(--f2);
+            margin: 0.5em 0;
+          }
+          p
+          {
+            font: 500 1.2em var(--f1);
+            margin: 0.5em 0;
+            margin-bottom: 2.5em;
+          }
+          .linkCont
+          {
+            background: white;
+            width: 100%;
+            height: 6.2em;
+            margin-bottom: -0.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a
+            {
+              background-color: rgb(241, 184, 109);
+              mix-blend-mode: difference;
+              width: 100%;
+              height: 4.2em;
+              border: 4px solid rgb(240, 217, 217);//rgb(39, 39, 27);
+              border-radius: 0.5em;
+              margin: 0 auto;
+              position: relative;
+              cursor: pointer;
+
+              .vp
+              {
+                color: var(--c1);
+                background-color: rgb(255, 222, 160);
+                font: 500 1.5em var(--f2);
+                height: calc(100% + 8px);
+                border: 4px solid rgb(240, 217, 217);//rgb(39, 39, 27);
+                border-radius: 0.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.7em;
+                position: absolute;
+                left: -4px;
+                right: -4px;
+                bottom: 12px;
+                transition: all .12s;
+              }
+            }
+            a:hover
+            {
+              .vp
+              {
+                bottom: 6px;
+              }
+            }
+            a:active
+            {
+              .vp
+              {
+                bottom: 0;
+              }
+            }
+          }
+          .linkCont-inactive
+          {
+            opacity: 0.4;
+            pointer-events: none;
+          }
         }
       }
       .s2
