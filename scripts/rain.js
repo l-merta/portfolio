@@ -3,7 +3,7 @@ const rain_canvas = rain_canvas_parent.querySelector('.rain');
 const rain_ctx = rain_canvas.getContext('2d');
 
 const rainSquares = [];
-const numSquares = 4;
+const numSquares = 8;
 const maxSize = 6;
 const minSize = 4;
 const maxSpeed = 16;

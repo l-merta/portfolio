@@ -479,6 +479,7 @@ main .aCont .aInnerCont:hover .line {
 
 .projekty {
   width: 100%;
+  height: 110em;
   padding-top: 14em;
   padding-bottom: 14em;
   position: relative;
@@ -519,6 +520,7 @@ main .aCont .aInnerCont:hover .line {
   gap: 0.8em;
   -webkit-backdrop-filter: blur(14px);
           backdrop-filter: blur(14px);
+  transition: all 0.12s;
 }
 .projekty .weby .web .s1 {
   width: 100%;
@@ -529,10 +531,19 @@ main .aCont .aInnerCont:hover .line {
 .projekty .weby .web .s1 .s11 {
   width: 100%;
 }
-.projekty .weby .web .s1 .s11 img {
+.projekty .weby .web .s1 .s11 .imgCont {
+  background-color: whitesmoke;
   aspect-ratio: 16/9 !important;
   width: 100%;
   border-radius: 0.7em;
+  overflow: hidden;
+  transition: all 0.12s;
+}
+.projekty .weby .web .s1 .s11 .imgCont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projekty .weby .web .s1 .s12 {
   width: 70%;
@@ -540,19 +551,40 @@ main .aCont .aInnerCont:hover .line {
   flex-direction: column;
 }
 .projekty .weby .web .s1 .s12 nav {
-  background-color: whitesmoke;
   width: 100%;
-  height: 2em;
+  height: 3em;
+}
+.projekty .weby .web .s1 .s12 nav a {
+  color: rgb(71, 71, 71);
+  aspect-ratio: 1/1;
+  height: 100%;
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.12s;
+  cursor: pointer;
+}
+.projekty .weby .web .s1 .s12 nav a i {
+  scale: 1.5;
+}
+.projekty .weby .web .s1 .s12 nav a:hover {
+  color: rgb(0, 106, 228);
+  border-color: rgb(0, 106, 228);
+  scale: 1.05;
 }
 .projekty .weby .web .s1 .s12 h1 {
   color: var(--c1);
   font: 600 1.7em var(--f2);
   margin: 0.5em 0;
+  margin-top: 0.8em;
 }
 .projekty .weby .web .s1 .s12 p {
   font: 500 1.2em var(--f1);
   margin: 0.5em 0;
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
 }
 .projekty .weby .web .s1 .s12 .linkCont {
   background: white;
@@ -602,9 +634,31 @@ main .aCont .aInnerCont:hover .line {
   pointer-events: none;
 }
 .projekty .weby .web .s2 {
-  background-color: whitesmoke;
   width: 100%;
-  height: 2em;
+  height: 4em;
+  display: flex;
+  gap: 1em;
+}
+.projekty .weby .web .s2 .tech {
+  aspect-ratio: 1/1;
+  height: 100%;
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.projekty .weby .web .s2 .tech img {
+  width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projekty .weby .web:hover {
+  scale: 1.02;
+}
+.projekty .weby .web:hover .s1 .s11 .imgCont {
+  border-radius: 4em;
 }
 
 @keyframes colorChangeStart {
@@ -621,5 +675,10 @@ main .aCont .aInnerCont:hover .line {
   }
   100% {
     scale: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  .projekty .weby .web .s1 {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=main.css.map */

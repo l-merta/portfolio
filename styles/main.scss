@@ -565,6 +565,7 @@ main
 .projekty
 {
   width: 100%;
+  height: 110em;
   padding-top: 14em;
   padding-bottom: 14em;
   position: relative;
@@ -612,6 +613,7 @@ main
       flex-direction: column;
       gap: 0.8em;
       backdrop-filter: blur(14px);
+      transition: all .12s;
       
       .s1
       {
@@ -623,11 +625,21 @@ main
         .s11
         {
           width: 100%;
-          img
+          .imgCont
           {
+            background-color: whitesmoke;
             aspect-ratio: 16/9 !important;
             width: 100%;
             border-radius: 0.7em;
+            overflow: hidden;
+            transition: all .12s;
+
+            img
+            {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
         .s12
@@ -638,21 +650,47 @@ main
 
           nav
           {
-            background-color: whitesmoke;
             width: 100%;
-            height: 2em;
+            height: 3em;
+
+            a
+            {
+              color: rgb(71, 71, 71);
+              aspect-ratio: 1/1;
+              height: 100%;
+              border: 2px solid rgb(150, 150, 150);
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              transition: all .12s;
+              cursor: pointer;
+
+              i
+              {
+                scale: 1.5;
+              }
+            }
+            a:hover
+            {
+              color: rgb(0, 106, 228);
+              border-color: rgb(0, 106, 228);
+              scale: 1.05;
+            }
           }
           h1
           {
             color: var(--c1);
             font: 600 1.7em var(--f2);
             margin: 0.5em 0;
+            margin-top: 0.8em;
           }
           p
           {
             font: 500 1.2em var(--f1);
             margin: 0.5em 0;
-            margin-bottom: 2.5em;
+            margin-bottom: 2.0em;
           }
           .linkCont
           {
@@ -719,9 +757,37 @@ main
       }
       .s2
       {
-        background-color: whitesmoke;
         width: 100%;
-        height: 2em;
+        height: 4em;
+        display: flex;
+        gap: 1.0em;
+        
+        .tech
+        {
+          aspect-ratio: 1/1;
+          height: 100%;
+          border: 2px solid rgb(150, 150, 150);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+          img
+          {
+            width: 70%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .web:hover
+    {
+      scale: 1.02;
+
+      .s1 .s11 .imgCont
+      {
+        border-radius: 4em;
       }
     }
   }
@@ -747,5 +813,16 @@ main
   100%
   {
     scale: 1;
+  }
+}
+
+@media screen and (max-width: 800px)
+{
+  .projekty
+  {
+    .weby .web .s1
+    {
+      flex-direction: column;
+    }
   }
 }

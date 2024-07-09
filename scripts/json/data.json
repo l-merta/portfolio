@@ -26,6 +26,117 @@
       "folder": "css"
     }
   ],
+  "projekty": [
+    {
+      "name": "TicTacWeb",
+      "popis": "Online piškvorky proti počítači nebo ostatním hráčům v hracím poli s různými velikostmi",
+      "image": "TicTacWeb.png",
+      "link": "https://tictacweb.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "ChatApp",
+      "popis": "Chatovací aplikace pomocí real-time databáze",
+      "image": "ChatApp.png",
+      "link": "https://chatappwebsite.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "WeatherApp",
+      "popis": "Aktuální počasí ze všech zemí a měst světa včetně místního času",
+      "image": "WeatherApp.png",
+      "link": "https://mojepocasiapp.netlify.app",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    },
+    {
+      "name": "CheerHub",
+      "popis": "Sociální síť pro sdílení pozitivních zpráv",
+      "image": "CheerNet.png",
+      "link": "",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        },
+        {
+          "name": "PHP",
+          "icon": "php.png"          
+        }
+      ]
+    },
+    {
+      "name": "Twitter",
+      "popis": "Vizuální napodobenina známe sociální sítě Twitter",
+      "image": "Twitter.png",
+      "link": "",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "HTML",
+          "icon": "html.png"          
+        },
+        {
+          "name": "CSS",
+          "icon": "css.png"          
+        },
+        {
+          "name": "JS",
+          "icon": "js.png"          
+        }
+      ]
+    }
+  ],
   "tech": [
     {
       "icon": "html.png",
