@@ -49,6 +49,23 @@
       ]
     },
     {
+      "name": "Filmíno",
+      "popis": "Databáze filmů a seriálů",
+      "image": "TicTacWeb.png",
+      "link": "vlastni/filmino",
+      "download": "file.rar",
+      "tech": [
+        {
+          "name": "SCSS",
+          "icon": "sass.png"          
+        },
+        {
+          "name": "REACT",
+          "icon": "react.png"          
+        }
+      ]
+    },
+    {
       "name": "ChatApp",
       "popis": "Chatovací aplikace pomocí real-time databáze",
       "image": "ChatApp.png",
@@ -89,52 +106,6 @@
           "icon": "js.png"          
         }
       ]
-    },
-    {
-      "name": "CheerHub",
-      "popis": "Sociální síť pro sdílení pozitivních zpráv",
-      "image": "CheerNet.png",
-      "link": "",
-      "download": "file.rar",
-      "tech": [
-        {
-          "name": "HTML",
-          "icon": "html.png"          
-        },
-        {
-          "name": "CSS",
-          "icon": "css.png"          
-        },
-        {
-          "name": "JS",
-          "icon": "js.png"          
-        },
-        {
-          "name": "PHP",
-          "icon": "php.png"          
-        }
-      ]
-    },
-    {
-      "name": "Twitter",
-      "popis": "Vizuální napodobenina známe sociální sítě Twitter",
-      "image": "Twitter.png",
-      "link": "",
-      "download": "file.rar",
-      "tech": [
-        {
-          "name": "HTML",
-          "icon": "html.png"          
-        },
-        {
-          "name": "CSS",
-          "icon": "css.png"          
-        },
-        {
-          "name": "JS",
-          "icon": "js.png"          
-        }
-      ]
     }
   ],
   "tech": [
@@ -151,8 +122,20 @@
       "color": "rgb(0, 129, 235)"
     },
     {
+      "icon": "sass.png",
+      "name": "SCSS",
+      "percent": 0,
+      "color": "rgb(0, 129, 235)"
+    },
+    {
       "icon": "js.png",
       "name": "JS",
+      "percent": 0,
+      "color": "rgb(230, 214, 0)"
+    },
+    {
+      "icon": "react.png",
+      "name": "REACT",
       "percent": 0,
       "color": "rgb(230, 214, 0)"
     },
